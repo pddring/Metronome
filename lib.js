@@ -1,11 +1,13 @@
 var metronome = {
     bpm: 60,
+    currentBeat: 1,
 
     init: () => {
         metronome.elements = {
             bpm: document.getElementById("bpm"),
             slower: document.getElementById("btn-slower"),
-            faster: document.getElementById("btn-faster")
+            faster: document.getElementById("btn-faster"),
+            startStop: document.getElementById("btn-start-stop")
         };
 
         metronome.elements.slower.onclick = (e) => {
@@ -15,6 +17,22 @@ var metronome = {
         metronome.elements.faster.onclick = (e) => {
             metronome.updateBPM(metronome.bpm + 5);
         }
+
+        metronome.elements.startStop.onclick = (e) => {
+            metronome.playing = !metronome.playing;
+            metronome.elements.startStop.value = metronome.value? "Stop" : "Start";
+
+            if(metronome.playing) {
+                var ms = 1 / metronome.bpm;
+                metronome.callback = setInterval(metronome.onTick, ms)
+            } else {
+                clearInterval(metronome.callback);
+            }
+        }
+    },
+
+    onTick: () => {
+        console.log("Tick");
     },
 
     updateBPM: (bpm) => {
