@@ -1,6 +1,7 @@
 var metronome = {
     bpm: 60,
     currentBeat: 1,
+    beats: 4,
 
     init: () => {
         metronome.elements = {
@@ -23,7 +24,7 @@ var metronome = {
             metronome.elements.startStop.value = metronome.value? "Stop" : "Start";
 
             if(metronome.playing) {
-                var ms = 1 / metronome.bpm;
+                var ms = 1000 / metronome.bpm;
                 metronome.callback = setInterval(metronome.onTick, ms)
             } else {
                 clearInterval(metronome.callback);
@@ -32,6 +33,7 @@ var metronome = {
     },
 
     onTick: () => {
+        metronome.currentBeat = (metronome.currentBeat + 1) % 
         console.log("Tick");
     },
 
