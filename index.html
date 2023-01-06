@@ -1,1 +1,24 @@
-I'm a little metronome
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Metronome</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Metronome</h1>
+        <div id="outer" class="center">
+            <div class="screen">
+                <div id="counter">1</div>
+                <span id="indicator">▲</span>
+            </div>
+            <div>
+                <input id="bpm" value="60">
+                <input id="btn-slower" value="-" type="button">
+                <input id="btn-faster" value="+" type="button">
+                <input id="btn-start-stop" value="Start" type="button">
+            </div>
+        </div>
+
+        <script src="lib.js"></script>
+    </body>
+</html>

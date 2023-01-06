@@ -1,0 +1,65 @@
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+input {
+    background-color: white;
+    text-align: center;
+    font-size: large;
+    border-radius: 1em;
+    margin: 1em;
+    padding: 10px;
+}
+
+input:hover {
+    background-color: red;
+}
+
+#outer {
+    background-color: #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.center {
+    text-align: center;;
+}
+
+.screen {
+    font-size: 3em;
+    padding: 1em;
+    padding-right: 1em;
+    background: #000;
+    color: #ccc;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    overflow: hidden;
+}
+
+#indicator {
+    position: absolute;
+    margin-left: -.5em;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes swoosh {
+    0% {
+        left: 0.5em;
+        color: red;
+    }
+    3% {
+        color: blue;
+    }
+    97% {
+        color: blue;
+    }
+
+    100% {
+        left: 100%;
+        color: red;
+    }
+}
