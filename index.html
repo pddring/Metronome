@@ -5,13 +5,18 @@
     <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
+    <h1>Metronome</h1>
     <div id="metronome">
-        <input type="button" value="-" id="btnDecreaseBPM">
+        <input class="bpm-change" type="button" value="-" id="btnDecreaseBPM">
         <input value="60" id="txtBPM">
-        <input type="button" value="+" id="btnIncreaseBPM">
+        <input class="bpm-change" type="button" value="+" id="btnIncreaseBPM">
         <div>
             <input type="button" value="start" id="btnStartStop">
         </div>
+        <img id="logo" src="https://pbs.twimg.com/profile_images/1263769058232729601/AgZOKdoJ_400x400.jpg" />
     </div>
+    Source code: <a href="https://github.com/pddring/Metronome">view on GitHub</a>
+    <p>Published under a creative commons licence</p>
+    <script src="lib.js"></script>
 </body>
 </html>
