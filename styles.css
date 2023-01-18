@@ -43,6 +43,7 @@ input {
     right: 1em;
     bottom: 1em;
     opacity: 0.5;
+    border: solid 2px white;
 }
 
 #txtBPM {
